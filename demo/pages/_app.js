@@ -1,4 +1,4 @@
-import 'tailwindcss/tailwind.css'
+import '../style/global.css'
 import React from 'react'
 
 export default function App({ Component, pageProps }) {

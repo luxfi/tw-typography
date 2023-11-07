@@ -2,6 +2,7 @@ const mdx = require('@mdx-js/mdx')
 
 module.exports = {
   content: ['./demo/pages/**/*.{js,mdx}', './demo/components/**/*.{js,mdx}'],
+  darkMode: ['class'],
   transform: {
     mdx: (content) => mdx.sync(content),
   },
@@ -29,5 +30,5 @@ module.exports = {
     },
   },
   variants: {},
-  plugins: [require('../src/index.js')],
+  plugins: [require('../src/index.js')({ base: 20 })],
 }

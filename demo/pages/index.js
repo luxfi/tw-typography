@@ -45,7 +45,7 @@ export default function Index() {
                 </a>
               </div>
             </div>
-            <div className="prose prose-sm sm:prose-base lg:prose-lg xl:prose-xl 2xl:prose-2xl dark:prose-invert mx-auto">
+            <div className="prose prose-sm sm:prose-base lg:prose-lg xl:prose-xl dark:prose-invert mx-auto">
               <MarkdownSample />
             </div>
           </div>

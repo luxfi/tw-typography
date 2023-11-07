@@ -1,8 +1,10 @@
 const plugin = require('tailwindcss/plugin')
 const merge = require('lodash.merge')
 const castArray = require('lodash.castarray')
-const styles = require('./styles')
+const getStyles = require('./styles')
 const { commonTrailingPseudos } = require('./utils')
+
+let baseFontSize = 10 // TODO
 
 const computed = {
   // Reserved for future "magic properties", for example:
@@ -69,7 +71,8 @@ function configToCss(config = {}, { target, className, modifier, prefix }) {
 }
 
 module.exports = plugin.withOptions(
-  ({ className = 'prose', target = 'modern' } = {}) => {
+  ({ className = 'prose', target = 'modern', base = 16 } = {}) => {
+    baseFontSize = base
     return function ({ addVariant, addComponents, theme, prefix }) {
       let modifiers = theme('typography')
 
@@ -133,7 +136,7 @@ module.exports = plugin.withOptions(
   },
   () => {
     return {
-      theme: { typography: styles },
+      theme: { typography: getStyles(baseFontSize) },
     }
   }
 )
