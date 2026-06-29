@@ -1,3 +1,5 @@
+<p align="center"><img src=".github/hero.svg" alt="tw-typography" width="880"></p>
+
 <p>
   <a href="https://tailwindcss.com/docs/typography-plugin" target="_blank">
     <picture>
